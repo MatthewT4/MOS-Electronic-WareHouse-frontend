@@ -15,13 +15,14 @@ button {
            font-size: 13pt;
            height:8%;
            width:68%;
-           background: #f7f5f5
+           background: #f7f5f5;
            padding: 3px 7px;
            color: #333;
            -moz-border-radius: 5px;
            -webkit-border-radius: 5px;
            border-radius: 10px;
            border: 1px solid #666;
+           text-align: center;
           }
 .right {width:78%; float:right; background: #FFFFFF; margin: 0%; padding: 5% 2% 1% 2%;}
 table {
@@ -35,13 +36,16 @@ tr, td, th{
   width: 16%;
 }
 .checkbox {
-  width: 4%;
+  width: 3%;
 }
 .weight {
-  width: 13%;
+  width: 14%;
 }
 .Comment {
   width: 22%;
+}
+.Name {
+  width: 19%;
 }
 #main {
   display: none;
@@ -112,6 +116,25 @@ tr, td, th{
      a:active {
       color: #000000; 
      }
+
+button.knopka{
+margin: 15% 5% 12% 5%;
+font-size: 11pt;
+height:14%;
+width:77%;
+background-color: rgb(255, 255, 255);
+padding: 3px 7px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 10px;
+border: 1px solid #666;
+top: 14%;
+right: 0;
+bottom: 0;
+left: 0%;
+}
+.left2 {width:17%;height: 80%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
+.right2 {width:75%; height: 80%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
 
 
 
