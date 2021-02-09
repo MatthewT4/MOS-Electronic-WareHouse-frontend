@@ -33,22 +33,20 @@
             
             window {
             
-            position: absolute;
-            
-            top: 50%;
-            
-            left: 50%;
-            
-            width: 400px;
-            
-            border: 1px solid #cecece;
-            
-            padding: 50px;
-            
-            transform: translate(-50%,-50%);
-            
-            background-color: #fafafa;
-            
+                width: 70%;
+  height: 60%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: #0000cc;
+  position: absolute;
+  top: 13%;
+  right: 0;
+  bottom: 0;
+  left: 0%;
+  margin: auto;
             }
             
             div#main_text a.close_window {
@@ -78,6 +76,7 @@
   left: 0%;
   margin: auto;
 }
+#window:target {display: block;}
 #zatemnenie2 {
             
             background: rgba(102, 102, 102, 0.68);
@@ -97,6 +96,31 @@
             z-index: 9999999999;
             
             }
+            #okno:target {display: block;}
+            #main {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #ookno {
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #0000cc;
+        border-radius: 10px;
+        color: #0000cc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+      #main:target {display: block;}
             </style>
 </head>
     <body>
@@ -126,10 +150,13 @@
         <a href="#close_okno" class="close_okno">X</a>
         <div id="content">
         <div class="left2">
+            
             <p>
             <center>
                 <button class="knopka"> Добавить Товары в базу </button> 
                 </p>
+                
+               
                 <p>
                     <button class="knopka">
                         <a href="#zatemnenie2">
@@ -144,15 +171,9 @@
                 </button>
             </center>      
                     </p>
-        </div>
-        <div id="zatemnenie2">
-
-            <window>
-         
-                <a href="#close_window" class="close_window">X</a>
-ляля
-            </window>
-        </div> 
+        
+                
+    </div>        
         <div class="right2">
             <table cellspacing=0>
                 <tr >
@@ -211,10 +232,16 @@
 
     </div>
 </div>
+</okno>
 </div>
 
+<div id="zatemnenie2">
+<okno>
+    <a href="#close_okno" class="close_okno">X</a>
+hh
 </okno>
-</div> 
+</div>
+    
 <div class="right">
 <table cellspacing=0>
     <tr>  
