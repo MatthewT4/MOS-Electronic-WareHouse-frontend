@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-        <link rel="stylesheet" href="main.css">
-        <style>
+    <head>
+        <meta charset="utf-8">
+            <link rel="stylesheet" href="main.css">
+            <style>
 
             #zatemnenie:target {
             
@@ -97,88 +97,89 @@
             z-index: 9999999999;
             
             }
+#zatemnenie2:target {
+            
+display: block;
+            
+}
             </style>
 </head>
-    <body>
+<body>
 <div id="head-site">
-<h1>Электронный склад</h1>
+    <h1>Электронный склад</h1>
 </div>
 <div id="content">
-<div class="left">
-<p>
-<center>
-    <button> <a href="#zatemnenie"> Добавление позиций </a> </button> 
-</p>
-<p>
-    <button>
- Выдача позиций
-</button>      
-    </p>
-    <p>
-        <button> Удаление позиций </button>    
-        </p>
-</center>
-</div>
-<div id="zatemnenie">
-
-    <okno>
- 
-        <a href="#close_okno" class="close_okno">X</a>
-        <div id="content">
-        <div class="left2">
-            <p>
+    <div class="left">
+        <p>
             <center>
-                <button class="knopka"> Добавить Товары в базу </button> 
-                </p>
-                <p>
-                    <button class="knopka">
-                        <a href="#zatemnenie2">
-                        Добавить позицию 
-                    </a>
-                    </button> 
-                </p>
-                <p>
+                <button> <a href="#zatemnenie"> Добавление позиций </a> </button> 
+        </p>
+        <p>
+            <button>
+                Выдача позиций
+            </button>      
+        </p>
+        <p>
+            <button> Удаление позиций </button>    
+            </p>
+            </center>
+    </div>
+    <div id="zatemnenie">
+
+        <okno>
+ 
+            <center><a href="#close_okno" class="close_okno">X</a></center>
+            
+            <div class="left2">
+                    <p>
+                        <center>
+                            <button class="knopka"> Добавить Товары в базу </button> 
+                    </p>
+                    <p>
+                        <button class="knopka">
+                            <a href="#zatemnenie2">
+                            Добавить позицию 
+                            </a>
+                        </button> 
+                    </p>
+                    
+                    <p>
                     
                     <button class="knopka">
                  Загрузить из Excel файла
-                </button>
-            </center>      
+                    </button>
+                        </center>      
                     </p>
-        </div>
-        <div id="zatemnenie2">
+            </div>
 
-            <window>
-         
-                <a href="#close_window" class="close_window">X</a>
-ляля
-            </window>
-        </div> 
-        <div class="right2">
-            <table cellspacing=0>
-                <tr >
+            
 
-                 <td class="checkbox">  </td>
+            <div class="right2">
+                <table cellspacing=0>
+                    <tr >
 
-                <th class="Name">Наименнование</th>
-                <th class="weight">Длина</th>
-                <th class="weight">Ширина</th>
-                <th class="weight">Высота</th>
-                <th class="weight">Вес</th>
-                <th class="weight">UUID</th>
-                <th class="Comment">Комментарий</th>
+                        <td class="checkbox">  </td>
 
-                </tr>
-                <tr >
+                        <th class="Name">Наименнование</th>
+                        <th class="weight">Длина</th>
+                        <th class="weight">Ширина</th>
+                        <th class="weight">Высота</th>
+                        <th class="weight">Вес</th>
+                        <th class="weight">UUID</th>
+                        <th class="Comment">Комментарий</th>
 
-                    <td class="checkbox"> &#10006; </td>
+                    </tr>
+                    <tr >
 
-                    <td class="Name"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="Comment"></td>
+                        <td class="checkbox"> &#10006; </td>
+
+                        <td class="Name"></td>
+                        <td class="weight"></td>
+                        <td class="weight"></td>
+                        <td class="weight"></td>
+                        <td class="weight"></td>
+                        <td class="weight"></td>
+                        <td class="Comment"></td>
 
                    </tr>
                    <tr >
@@ -207,13 +208,81 @@
                     <td class="Comment"></td>
 
                    </tr>
-            </table>
-
+                </table>
+            </div>
+        </okno>
+            
     </div>
-</div>
+
 </div>
 
-</okno>
+<div id="zatemnenie2">
+    <okno>
+        <center><a href="#close_okno" class="close_okno">X</a></center>
+                <div class="table">
+                    <table cellspacing=0>
+                        <tr >
+        
+                         <td class="checkbox">  </td>
+        
+                        <th class="Name">Наименнование</th>
+                        <th class="weight">Длина</th>
+                        <th class="weight">Ширина</th>
+                        <th class="weight">Высота</th>
+                        <th class="weight">Вес</th>
+                        <th class="Comment">Комментарий</th>
+                        <th class="weight">UUID</th>
+                        
+        
+                        </tr>
+                        <tr >
+        
+                            <td class="checkbox"> &#10006; </td>
+        
+                            <td class="Name"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="Comment"></td>
+                            <td class="weight"></td>
+                            
+                           </tr>
+                           <tr >
+        
+                            <td class="checkbox"> &#10006; </td>
+        
+                            <td class="Name"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="Comment"></td>
+                            <td class="weight"></td>
+                            
+        
+                           </tr>
+                           <tr >
+        
+                            <td class="checkbox"> &#10006; </td>
+        
+                            <td class="Name"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="weight"></td>
+                            <td class="Comment"></td>
+                            <td class="weight"></td>
+                            
+        
+                           </tr>
+                    </table>
+                </div>
+    </okno>
+                
+</div> 
+
+
 </div> 
 <div class="right">
 <table cellspacing=0>
