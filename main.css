@@ -149,3 +149,4 @@ left: 0%;
   .left3 {width:17%;height: 80%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
   .right3 {width:75%; height: 80%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
   .table {width:97%; background: #FFFFFF; margin: 0%; padding: 5% 2% 1% 2%;}
+  .right4 {width: 78%; height: 98%; float: right; background: rgb(197, 191, 191); margin: 10%, 2%, 10%, 20%; padding: 0% 2% 1% 2%; border-radius: 30px; text-align: left; color: #000;}
