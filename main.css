@@ -39,10 +39,10 @@ tr, td, th{
   width: 3%;
 }
 .weight {
-  width: 14%;
+  width: 13%;
 }
 .Comment {
-  width: 22%;
+  width: 19%;
 }
 .Name {
   width: 19%;
@@ -63,6 +63,25 @@ tr, td, th{
     left: 0;
     display: none;
   }
+  #zatemnenie2 {
+            
+    background: rgba(102, 102, 102, 0.68);
+    
+    width: 100%;
+    
+    height: 100%;
+    
+    position: fixed;
+    
+    top: 0;
+    
+    left: 0;
+    
+    display: none;
+    
+    z-index: 9999999999;
+    
+    }
 
 #main:target {display: block;}
 
@@ -81,6 +100,7 @@ tr, td, th{
      a:active {
       color: #000000; 
      }
+     
 
 button.knopka{
 margin: 15% 5% 12% 5%;
@@ -128,3 +148,5 @@ left: 0%;
   #main2:target {display: block;}
   .left3 {width:17%;height: 80%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
   .right3 {width:75%; height: 80%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
+  .table {width:97%; background: #FFFFFF; margin: 0%; padding: 5% 2% 1% 2%;}
+  .right4 {width: 78%; height: 98%; float: right; background: rgb(197, 191, 191); margin: 10%, 2%, 10%, 20%; padding: 0% 2% 1% 2%; border-radius: 30px; text-align: left; color: #000;}
