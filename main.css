@@ -100,8 +100,9 @@ tr, td, th{
      a:active {
       color: #000000; 
      }
-     
-
+  .second { 
+    color: #ad0000; 
+}
 button.knopka{
 margin: 15% 5% 12% 5%;
 font-size: 11pt;
@@ -118,8 +119,8 @@ right: 0;
 bottom: 0;
 left: 0%;
 }
-.left2 {width:17%;height: 80%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
-.right2 {width:75%; height: 80%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
+.left2 {width:17%;height: 67%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
+.right2 {width:75%; height: 67%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
 
 #main2 {
   display: none;
@@ -129,22 +130,7 @@ left: 0%;
   width: 100%;
   height: 100%;}
 
-  #okno2 {
-    width: 70%;
-    height: 60%;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 15px;
-    border: 1px solid grey;
-    border-radius: 10px;
-    color: #0000cc;
-    position: absolute;
-    top: 13%;
-    right: 0;
-    bottom: 0;
-    left: 0%;
-    margin: auto;
-  }
+ 
   #main2:target {display: block;}
   .left3 {width:17%;height: 80%; float:left; background: #ffffff; border: 0%; padding: 5% 0 5% 0}
   .right3 {width:75%; height: 80%; float:right; background: #FFFFFF; margin: 3% 0% 0% 0%; padding: 5% 2% 1% 2%;}
