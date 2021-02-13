@@ -31,38 +31,24 @@
             
             }
             
-            window {
-            
-            position: absolute;
-            
-            top: 50%;
-            
-            left: 50%;
-            
-            width: 400px;
-            
-            border: 1px solid #cecece;
-            
-            padding: 50px;
-            
-            transform: translate(-50%,-50%);
-            
-            background-color: #fafafa;
-            
-            }
-            
-            div#main_text a.close_window {
-            
-            position: absolute;
-            
-            right: 10px;
-            
-            top: 4px;
-            
-            border: none;
-            
-            }
+         
   okno {
+  width: 70%;
+  height: 60%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: #0000cc;
+  position: absolute;
+  top: 13%;
+  right: 0;
+  bottom: 0;
+  left: 0%;
+  margin: auto;
+}
+window {
   width: 70%;
   height: 60%;
   background-color: rgb(255, 255, 255);
@@ -103,6 +89,7 @@ display: block;
             
 }
             </style>
+
 </head>
 <body>
 <div id="head-site">
@@ -128,7 +115,7 @@ display: block;
 
         <okno>
  
-            <center><a href="#close_okno" class="close_okno">X</a></center>
+            <center><p align="right" ><a href="#close_okno" class="close_okno">X</a></p></center>
             
             <div class="left2">
                     <p>
@@ -282,10 +269,12 @@ display: block;
                 
 </div>--> 
 <div id="zatemnenie2">
-    <okno>
+    <window>
         <div class="left2">
             <center>
+                <a href="#close_window" class="close_window">
                 <button class="knopk">Закрыть</button>
+            </a>
                 <button class="knopk">Добавить</button>
             </center>
         </div>
@@ -298,7 +287,7 @@ display: block;
             <p>Вес (гр):<span style="color: red;">*</span> <input type="text" size="22"></p>
             <p>UUID:<span style="color: red;">*</span> <input type="text" size="24"> <br> <input type="button"> <span style="font-size: 9pt;">сгенерировать UUID</span></p>
         </div>
-    </okno>
+    </window>
 </div>
 
 </div> 
