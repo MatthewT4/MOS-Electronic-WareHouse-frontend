@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+      var requestURL = 'http_://localhost/data';
+      var request = new XMLHttpRequest();
+      request.open('GET', requestURL);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+           var parsle = request.response;
+           populateHeader(parsle);
+           showParsle(parsle);
+
+        }
+    var obj =  JSON.parse(request)
+     if (obj ['status'] == 200) console.log('ошибка!');
+     
+    </script>
     <meta charset="utf-8">
         <link rel="stylesheet" href="main.css">
         <style>
@@ -100,6 +116,7 @@
             </style>
 </head>
     <body>
+        
 <div id="head-site">
 <h1>Электронный склад</h1>
 </div>
@@ -150,7 +167,7 @@
             <window>
          
                 <a href="#close_window" class="close_window">X</a>
-ляля
+ляля 
             </window>
         </div> 
         <div class="right2">
@@ -216,7 +233,9 @@
 </okno>
 </div> 
 <div class="right">
-<table cellspacing=0>
+   
+<table cellspacing=0 id = 'tablo'>
+   
     <tr>  
 
         <th class="checkbox"> &#9898; </th> <!-- ChekBox -->
@@ -261,7 +280,9 @@
         <td ></td>
    
     </tr>
+   
 </table>
+ <script src = "/cells.js"></script>
 </div>
 </div>
 </body>
