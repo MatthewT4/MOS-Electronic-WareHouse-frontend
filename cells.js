@@ -9,14 +9,14 @@ function GetJson(){
          populateHeader(parsle);
          showParsle(parsle);
    }
+   obj = JSON.parse(parsle);
 }
-obj = JSON.parse(parsle);
 if (obj ['status'] !== 200){
     console.log('Не удалось получить данные');
 }
 else{
     table = document.getElementById('tablo');
-    $("td : second").after(obj[1]);
+    $("td : second").after(obj[3]);
 
 }
 
