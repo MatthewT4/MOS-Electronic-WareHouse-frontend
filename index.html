@@ -1,61 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script>
-      var requestURL = '/http:localhost//data';
-      var request = new XMLHttpRequest();
-      request.open('GET', requestURL);
-      request.responseType = 'json';
-      request.send();
-      request.onload = function() {
-           var parsle = request.response;
-					 console.log(parsle);
-					 console.log(parsle['status'])
-					 var mass = parsle["body"];
-					 console.log(mass);
-					 var tables_html = `
-                     <table cellspacing="0" id='tablo'>
-                        <tr>  
-
-<th class="checkbox"> &#9898; </th> <!-- ChekBox -->
-<th >Наименнование</th>
-<th >Местоположение</th>
-<th class="weight">Размер(В*Ш*Г)</th>
-<th class="weight">Вес</th>
-<th class="Comment">Комментарий</th>
-<th >UUID</th>
-
-</tr>`;
-            for (let index = 0; index < mass.length; index++) {
-                const element = mass[index];
-                    tables_html+=`
-                    <tr>
-                        <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
-        <td >`+element["Empty"]+`</td>
-        <td >`+element["HeightCell"]+`</td>
-        <td class="weight">`+element["PositionCell"]+`</td>
-        <td class="weight">`+element["TypeCell"]+`</td>
-        <td class="Comment"></td>
-        <td >`+element["Position_UUID"]+`</td>
-   
-    </tr>
-							`;
-					}
-					tables_html+='</table>';
-					console.log(tables_html);
-					document.getElementsByClassName('right')[0].innerHTML = tables_html;
-
-           ///populateHeader(parsle);
-           ///showParsle(parsle);
-if (parsle ['status'] == 200) console.log('ошибка!');
-        }
-     
-    </script>
-    <meta charset="utf-8">
-        <link rel="stylesheet" href="main.css">
-        <style>
+    <head>
+        <meta charset="utf-8">
+            <link rel="stylesheet" href="main.css">
+            <style>
 
             #zatemnenie:target {
             
@@ -143,8 +91,7 @@ display: block;
             </style>
 
 </head>
-    <body>
-        
+<body>
 <div id="head-site">
     <h1>Электронный склад</h1>
 </div>
@@ -192,15 +139,7 @@ display: block;
                     </p>
             </div>
 
-            <window>
-         
-                <a href="#close_window" class="close_window">X</a>
-ляля 
-            </window>
-        </div> 
-        <div class="right2">
-            <table cellspacing=0>
-                <tr >
+            
 
             <div class="right2">
                 <table cellspacing=0>
@@ -353,9 +292,7 @@ display: block;
 
 </div> 
 <div class="right">
-   
-<table cellspacing=0 id = 'tablo'>
-   
+<table cellspacing=0>
     <tr>  
 
         <th class="checkbox"> &#9898; </th> <!-- ChekBox -->
@@ -400,9 +337,7 @@ display: block;
         <td ></td>
    
     </tr>
-   
 </table>
- <script src = "/cells.js"></script>
 </div>
 </div>
 </body>
