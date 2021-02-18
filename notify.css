@@ -1,0 +1,62 @@
+.notify {
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    top: 9px;
+    right: 7px;
+    display: block;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid;
+    padding: 15px;
+}
+
+.notify__ {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.notify__close__btn {
+    background: black;
+    display: block;
+    padding: 3px;
+    color: black !important;
+}
+
+.notify__close__btn i {
+    background: white;
+    display: block;
+    padding: 3px;
+    color: black !important;
+}
+
+.notify__error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.notify__title {
+    flex-grow: 2;
+}
+
+.notify__message {
+    flex-grow: 3;
+    margin-top: 15px;
+    font-size: 11px;
+}
+.notify__icon {
+    text-align: center;
+    font-size: 24px;
+}
+.error{
+	color:red;
+}
+.success{
+	color:green;
+}
+.info{
+	color:orange;
+}

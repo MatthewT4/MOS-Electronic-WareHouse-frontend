@@ -1,343 +1,321 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-            <link rel="stylesheet" href="main.css">
-            <style>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<style>
 
-            #zatemnenie:target {
-            
-            display: block;
-            
-            }
-            
-            #zatemnenie {
-            
-            background: rgba(102, 102, 102, 0.68);
-            
-            width: 100%;
-            
-            height: 100%;
-            
-            position: fixed;
-            
-            top: 0;
-            
-            left: 0;
-            
-            display: none;
-            
-            z-index: 9999999999;
-            
-            }
-            
-         
-  okno {
-  width: 70%;
-  height: 60%;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 15px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  color: #0000cc;
-  position: absolute;
-  top: 13%;
-  right: 0;
-  bottom: 0;
-  left: 0%;
-  margin: auto;
-}
-window {
-  width: 70%;
-  height: 60%;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 15px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  color: #0000cc;
-  position: absolute;
-  top: 13%;
-  right: 0;
-  bottom: 0;
-  left: 0%;
-  margin: auto;
-}
-#zatemnenie2 {
-            
-            background: rgba(102, 102, 102, 0.68);
-            
-            width: 100%;
-            
-            height: 100%;
-            
-            position: fixed;
-            
-            top: 0;
-            
-            left: 0;
-            
-            display: none;
-            
-            z-index: 9999999999;
-            
-            }
-#zatemnenie2:target {
-            
-display: block;
-            
-}
-            </style>
+    #zatemnenie:target {
+
+        display: block;
+
+    }
+
+    #zatemnenie {
+
+        background: rgba(102, 102, 102, 0.68);
+
+        width: 100%;
+
+        height: 100%;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        display: none;
+
+        z-index: 9999999999;
+
+    }
+
+
+    okno {
+        width: 70%;
+        height: 60%;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 15px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        color: #0000cc;
+        position: absolute;
+        top: 13%;
+        right: 0;
+        bottom: 0;
+        left: 0%;
+        margin: auto;
+    }
+    window {
+        width: 70%;
+        height: 60%;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 15px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        color: #0000cc;
+        position: absolute;
+        top: 13%;
+        right: 0;
+        bottom: 0;
+        left: 0%;
+        margin: auto;
+    }
+    #zatemnenie2 {
+
+        background: rgba(102, 102, 102, 0.68);
+
+        width: 100%;
+
+        height: 100%;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        display: none;
+
+        z-index: 9999999999;
+
+    }
+    #zatemnenie2:target {
+
+        display: block;
+
+    }
+</style>
 
 </head>
 <body>
-<div id="head-site">
-    <h1>Электронный склад</h1>
-</div>
-<div id="content">
-    <div class="left">
-        <p>
-            <center>
-                <button> <a href="#zatemnenie"> Добавление позиций </a> </button> 
-        </p>
-        <p>
-            <button>
-                Выдача позиций
-            </button>      
-        </p>
-        <p>
-            <button> Удаление позиций </button>    
-            </p>
-            </center>
+    <div id="head-site">
+        <h1>Электронный склад</h1>
     </div>
-    <div id="zatemnenie">
+    <div id="content">
+        <div class="left">
+            <p>
+                <center>
+                    <button> <a href="#zatemnenie"> Добавление позиций </a> </button> 
+                </p>
+                <p>
+                    <button>
+                        Выдача позиций
+                    </button>      
+                </p>
+                <p>
+                    <button> Удаление позиций </button>    
+                </p>
+            </center>
+        </div>
+        <div id="zatemnenie">
 
-        <okno>
- 
-            <center><p align="right" ><a href="#close_okno" class="close_okno">X</a></p></center>
-            
-            <div class="left2">
+            <okno>
+
+                <center><p align="right" ><a href="#close_okno" class="close_okno">X</a></p></center>
+
+                <div class="left2">
                     <p>
                         <center>
-                            <button class="knopka"> Добавить Товары в базу </button> 
-                    </p>
-                    <p>
-                        <button class="knopka">
-                            <a href="#zatemnenie2">
-                            Добавить позицию 
-                            </a>
-                        </button> 
-                    </p>
-                    
-                    <p>
-                    
-                    <button class="knopka">
-                 Загрузить из Excel файла
-                    </button>
+                            <button class="knopka" onclick="sendValues();"> Добавить Товары в базу </button> 
+                        </p>
+                        <p>
+                            <button class="knopka">
+                                <a href="#zatemnenie2">
+                                    Добавить позицию 
+                                </a>
+                            </button> 
+                        </p>
+                        <p>
                         </center>      
                     </p>
-            </div>
+                </div>
 
-            
 
-            <div class="right2">
-                <table cellspacing=0>
-                    <tr >
 
-                        <td class="checkbox">  </td>
+                <div class="right2">
+                    <table cellspacing=0 id="add-tables">
+                        <tr>
 
-                        <th class="Name">Наименнование</th>
-                        <th class="weight">Длина</th>
-                        <th class="weight">Ширина</th>
-                        <th class="weight">Высота</th>
-                        <th class="weight">Вес</th>
-                        <th class="weight">UUID</th>
-                        <th class="Comment">Комментарий</th>
+                            <td class="checkbox">  </td>
 
-                    </tr>
-                    <tr >
+                            <th class="Name" id="iname-set">Наименнование</th>
+                            <th class="weight" id="ilength-set">Длина</th>
+                            <th class="weight" id="iwidth-set">Ширина</th>
+                            <th class="weight" id="iheigth-set">Высота</th>
+                            <th class="weight" id="iweigth-set">Вес</th>
+                            <th class="weight" id="iuuid-set">UUID</th>
+                            <th class="Comment" id="icomment-set">Комментарий</th>
 
-                        <td class="checkbox"> &#10006; </td>
-
-                        <td class="Name"></td>
-                        <td class="weight"></td>
-                        <td class="weight"></td>
-                        <td class="weight"></td>
-                        <td class="weight"></td>
-                        <td class="weight"></td>
-                        <td class="Comment"></td>
-
-                   </tr>
-                   <tr >
-
-                    <td class="checkbox"> &#10006; </td>
-
-                    <td class="Name"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="Comment"></td>
-
-                   </tr>
-                   <tr >
-
-                    <td class="checkbox"> &#10006; </td>
-
-                    <td class="Name"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="weight"></td>
-                    <td class="Comment"></td>
-
-                   </tr>
-                </table>
-            </div>
-        </okno>
-            
-    </div>
-
-</div>
-
-<!--<div id="zatemnenie3">
-    <okno>
-        <center><a href="#close_okno" class="close_okno">X</a></center>
-                <div class="table">
-                    <table cellspacing=0>
-                        <tr >
-        
-                         <td class="checkbox">  </td>
-        
-                        <th class="Name">Наименнование</th>
-                        <th class="weight">Длина</th>
-                        <th class="weight">Ширина</th>
-                        <th class="weight">Высота</th>
-                        <th class="weight">Вес</th>
-                        <th class="Comment">Комментарий</th>
-                        <th class="weight">UUID</th>
-                        
-        
                         </tr>
-                        <tr >
-        
+                        <tr>
+
                             <td class="checkbox"> &#10006; </td>
-        
-                            <td class="Name"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="Comment"></td>
-                            <td class="weight"></td>
-                            
-                           </tr>
-                           <tr >
-        
-                            <td class="checkbox"> &#10006; </td>
-        
-                            <td class="Name"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="Comment"></td>
-                            <td class="weight"></td>
-                            
-        
-                           </tr>
-                           <tr >
-        
-                            <td class="checkbox"> &#10006; </td>
-        
-                            <td class="Name"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="weight"></td>
-                            <td class="Comment"></td>
-                            <td class="weight"></td>
-                            
-        
-                           </tr>
+
+                            <th class="Name" id="iname-set-1"></th>
+                            <th class="weight" id="ilength-set-1"></th>
+                            <th class="weight" id="iwidth-set-1"></th>
+                            <th class="weight" id="iheigth-set-1"></th>
+                            <th class="weight" id="iweigth-set-1"></th>
+                            <th class="weight" id="iuuid-set-1"></th>
+                            <th class="Comment" id="icomment-set-1"></th>
+
+                        </tr>
+
                     </table>
                 </div>
-    </okno>
-                
+            </okno>
+
+        </div>
+
+    </div>
+
+<!--<div id="zatemnenie3">
+<okno>
+<center><a href="#close_okno" class="close_okno">X</a></center>
+<div class="table">
+<table cellspacing=0>
+<tr >
+
+<td class="checkbox">  </td>
+
+<th class="Name">Наименнование</th>
+<th class="weight">Длина</th>
+<th class="weight">Ширина</th>
+<th class="weight">Высота</th>
+<th class="weight">Вес</th>
+<th class="Comment">Комментарий</th>
+<th class="weight">UUID</th>
+
+
+</tr>
+<tr >
+
+<td class="checkbox"> &#10006; </td>
+
+<td class="Name"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="Comment"></td>
+<td class="weight"></td>
+
+</tr>
+<tr >
+
+<td class="checkbox"> &#10006; </td>
+
+<td class="Name"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="Comment"></td>
+<td class="weight"></td>
+
+
+</tr>
+<tr >
+
+<td class="checkbox"> &#10006; </td>
+
+<td class="Name"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="weight"></td>
+<td class="Comment"></td>
+<td class="weight"></td>
+
+
+</tr>
+</table>
+</div>
+</okno>
+
 </div>--> 
 <div id="zatemnenie2">
     <window>
         <div class="left2">
             <center>
-                <a href="#close_window" class="close_window">
-                <button class="knopk">Закрыть</button>
-            </a>
-                <button class="knopk">Добавить</button>
+                <a href="#zatemnenie" class="close_window">
+                    <button class="knopk">Закрыть</button>
+                </a>
+                <!--<a href="#zatemnenie" class="close_window">
+                    
+                </a>-->
+                <button class="knopk" onclick="save2();">Добавить</button>
             </center>
         </div>
         <div class="right4">
             <h2 style="text-align: center;"> Добавление товара</h2>
-            <p>Наименнование:<span style="color: red;">*</span> <input type="text" size="65"></p>
-            <p>Длина (мм):<span style="color: red;">*</span> <input type="text" size="19"></p>
-            <p>Ширина (мм):<span style="color: red;">*</span> <input type="text" size="17"></p>
-            <p>Глубина (мм):<span style="color: red;">*</span> <input type="text" size="17"></p>
-            <p>Вес (гр):<span style="color: red;">*</span> <input type="text" size="22"></p>
-            <p>UUID:<span style="color: red;">*</span> <input type="text" size="24"> <br> <input type="button"> <span style="font-size: 9pt;">сгенерировать UUID</span></p>
+            <p>Наименнование:<span style="color: red;">*</span> <input type="text" id="iname" size="65"></p>
+            <p>Длина (мм):<span style="color: red;">*</span> <input type="text" id="ilength" size="19"></p>
+            <p>Ширина (мм):<span style="color: red;">*</span> <input type="text" id="iwidth" size="17"></p>
+            <p>Высота (мм):<span style="color: red;">*</span> <input type="text" id="iheigth" size="17"></p>
+            <p>Вес (гр):<span style="color: red;">*</span> <input type="text" id="iweigth" size="22"></p>
+            <p>Комментарий:<span style="color: red;">*</span> <input type="text" id="icomment" size="30"></p>
+            <p>UUID:<span style="color: red;">*</span> <input type="text" id="iuuid" size="24"> <br> <input type="button"> <span style="font-size: 9pt;">сгенерировать UUID</span></p>
+
         </div>
     </window>
 </div>
 
 </div> 
 <div class="right">
-<table cellspacing=0>
-    <tr>  
+    <table cellspacing=0 id = 'tablo'>
+        <tr>  
 
-        <th class="checkbox"> &#9898; </th> <!-- ChekBox -->
-        <th >Наименнование</th>
-        <th >Местоположение</th>
-        <th class="weight">Размер(В*Ш*Г)</th>
-        <th class="weight">Вес</th>
-        <th class="Comment">Комментарий</th>
-        <th >UUID</th>
+            <th class="checkbox"> &#9898; </th> <!-- ChekBox -->
+            <th >Наименнование</th>
+            <th >Местоположение</th>
+            <th class="weight">Размер(В*Ш*Г)</th>
+            <th class="weight">Вес</th>
+            <th class="Comment">Комментарий</th>
+            <th >UUID</th>
 
-    </tr>
-    <tr>
-        
-        <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
-        <td ></td>
-        <td ></td>
-        <td class="weight"></td>
-        <td class="weight"></td>
-        <td class="Comment"></td>
-        <td ></td>
-   
-    </tr>
-    <tr>
-        
-        <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
-        <td ></td>
-        <td ></td>
-        <td class="weight"></td>
-        <td class="weight"></td>
-        <td class="Comment"></td>
-        <td ></td>
-   
-    </tr>
-    <tr>
-        
-        <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
-        <td ></td>
-        <td ></td>
-        <td class="weight"></td>
-        <td class="weight"></td>
-        <td class="Comment"></td>
-        <td ></td>
-   
-    </tr>
-</table>
+        </tr>
+        <tr>
+
+            <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
+            <td ></td>
+            <td ></td>
+            <td class="weight"></td>
+            <td class="weight"></td>
+            <td class="Comment"></td>
+            <td ></td>
+
+        </tr>
+        <tr>
+
+            <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
+            <td ></td>
+            <td ></td>
+            <td class="weight"></td>
+            <td class="weight"></td>
+            <td class="Comment"></td>
+            <td ></td>
+
+        </tr>
+        <tr>
+
+            <td class="checkbox"> <input type="checkbox" name="a" value="1417"> </td>
+            <td ></td>
+            <td ></td>
+            <td class="weight"></td>
+            <td class="weight"></td>
+            <td class="Comment"></td>
+            <td ></td>
+
+        </tr>
+    </table>
+    <script src = "/cells.js"></script>
 </div>
 </div>
 </body>

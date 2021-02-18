@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Test POST Request</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<label for="name">Name</label><br>
+    <input id="name" placeholder="Name"><br><br>
+
+    <label for="uuid">UUID</label><br>
+    <input id="uuid" placeholder="UUID"><br><br>
+
+    <label for="heigth">Heigth</label><br>
+    <input id="heigth" placeholder="Heigth"><br><br>
+
+    <label for="width">Width</label><br>
+    <input id="width" placeholder="Width"><br><br>
+
+    <label for="depth">Depth</label><br>
+    <input id="depth" placeholder="Depth"><br><br>
+
+    <label for="weigth">Weigth</label><br>
+    <input id="weigth" placeholder="Weigth"><br><br><br><br>
+
+    <button type="submit" onclick="send();">Отправить</button>
+</body>
+<script>
+	function send() {
+		$.ajax({
+		        type: "POST",
+		        url: "http://localhost/data",
+				headers: {
+					"Accept":" application/json"
+				},
+				dataType:"json",
+		        data: '{"body": [{"Name": "ffff","UUID": "ddfldflflfldsfsl34435","Height": 10,"Width": 10,"Depth": 10,"Weight": 10}]}',
+		        success: function(data){
+		            alert("+");
+		            location.reload();
+		       }
+		});
+	}
+</script>
