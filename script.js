@@ -156,7 +156,7 @@ if (parsle ['status'] == 200) console.log('ошибка!');
 				},
 				dataType:"json",
 				data: OutData,
-				success: location.replace("#reload_tables")
+				success: location.replace("#close_okno")
 		});
 	setTimeout(() => {CreateTablePosition();}, 400);
     }
