@@ -3,8 +3,6 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <script>CreateTablePosition()</script>
-	
 <meta charset="utf-8">
 <link rel="stylesheet" href="main.css">
 <style>
@@ -103,27 +101,17 @@
         <div class="left">
             <p>
                 <center>
-                    <button> <a href="#zatemnenie" > Добавление позиций </a> </button> 
+                    <button> <a href="#zatemnenie"> Добавление позиций </a> </button> 
                 </p>
                 <p>
-                    <button onclick = "GivingPos()">
+                    <button>
                         Выдача позиций
-                    </button>  
-                    <!--<script src = "Giving.js"></script>-->
+                    </button>      
                 </p>
                 <p>
                     <button> Удаление позиций </button>    
                 </p>
             </center>
-        </div>
-        <div id="reload_tables">
-            <script>
-                url = window.location.href;
-                if( url.match(/#reload_tables/gi) ) {
-                    location.replace("./index.html");
-                    location.reload();
-                }
-            </script>
         </div>
         <div id="zatemnenie">
 
@@ -273,6 +261,7 @@
             <p>Высота (мм):<span style="color: red;">*</span> <input type="text" id="iheigth" size="17"></p>
             <p>Вес (гр):<span style="color: red;">*</span> <input type="text" id="iweigth" size="22"></p>
             <p>Комментарий:<span style="color: red;">*</span> <input type="text" id="icomment" size="30"></p>
+            <p>UUID:<span style="color: red;">*</span> <input type="text" id="iuuid" size="24"> <br> <input type="button"> <span style="font-size: 9pt;">сгенерировать UUID</span></p>
 
         </div>
     </window>
@@ -286,7 +275,7 @@
             <th class="checkbox"> &#9898; </th> <!-- ChekBox -->
             <th >Наименнование</th>
             <th >Местоположение</th>
-            <th class="weight">Размер(Д*Ш*В)</th>
+            <th class="weight">Размер(В*Ш*Г)</th>
             <th class="weight">Вес</th>
             <th class="Comment">Комментарий</th>
             <th >UUID</th>
@@ -326,7 +315,7 @@
 
         </tr>
     </table>
-    
+    <script src = "/cells.js"></script>
 </div>
 </div>
 </body>
